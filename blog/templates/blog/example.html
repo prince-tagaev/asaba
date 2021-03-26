@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'blog/css/style.css'%}">
+</head>
+<body>
+<div class="navbar navbar-dark bg-dark navbar-expand-xl justify-content-center">
+
+
+    <div class="text-light d-flex flex-row-reverse text-center">
+        <h2>School programmers ASABA</h2>
+    </div>
+
+
+</div>
+
+<nav class="navbar navbar-expand-xl navbar-light bg-light" aria-label="Sixth navbar example">
+    <div class="image d-flex flex-row"><img class="logo-style"
+                                            src="{% static 'blog/images/asaba-logo.png' %}"
+                                            alt=""></div>
+    <a class="navbar-brand ml-2" href="#">School project</a>
+    <div class="container">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample06"
+                aria-controls="navbarsExample06" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExample03">
+            <ul class="navbar-nav me-auto mb-2 mb-xl-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Students</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Parents</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">News</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Raiting</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About us</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="main">
+    <div class="row p-1 mt-5 m-0">
+        <div class="col-8 ml-1">
+            {% block content %}
+            {% endblock %}
+        </div>
+        <div class="col-3 ml-5 bg-secondary p-5 text-white">
+
+            <h3 class="text-warning">Lorem Ipsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut commodi eligendi error esse facere iusto
+                mollitia porro quam quibusdam ratione.</p>
+            <h3 class="text-warning">Lorem Ipsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut commodi eligendi error esse facere iusto
+                mollitia porro quam quibusdam ratione. Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
+                adipisci, blanditiis debitis esse eum expedita laborum libero minus modi nobis quam quas quidem
+                quisquam, quo recusandae vel veritatis voluptatibus. Ab accusantium aliquid aut blanditiis commodi culpa
+                delectus distinctio doloribus dolorum eligendi esse et fugiat hic illum in incidunt iste, magnam magni
+                minima molestiae odio perspiciatis porro possimus praesentium provident quae qui quis recusandae rem
+                saepe tempore temporibus velit voluptates. Adipisci aspernatur aut dicta distinctio dolores earum error
+                fuga iste itaque iure laudantium molestias nam nulla numquam quod, reprehenderit sed suscipit velit.
+                Autem culpa cupiditate distinctio dolore dolorum enim eos error ex harum inventore ipsa ipsum laboriosam
+                </p>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="footer bg-dark p-3 text-center text-light"> <b class="letter-spacing-2">designed by ©asaba</b></div>
+</footer>
+</body>
+</html>
