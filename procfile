@@ -1,1 +1,1 @@
-web: gunicorn asaba.wsgi --log-file -
+web: gunicorn ASABA.wsgi --log-file -
