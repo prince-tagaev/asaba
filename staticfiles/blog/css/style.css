@@ -1,0 +1,16 @@
+.logo-style{
+width: 64px;
+
+}
+
+body{
+background-color: #ccc;
+}
+
+.my-image-width{
+    height: 400px;
+}
+
+.letter-spacing-2 {
+    letter-spacing: 2px;
+}
