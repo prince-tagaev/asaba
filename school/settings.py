@@ -114,17 +114,36 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-
-STATIC_ROOT = os.path.join(BASE_DIR, "blog/static/")
-STATIC_URL = 'blog/static/'
-MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
+from django.conf.urls.static import static
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = '/static/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "/static/")
+    os.path.join(BASE_DIR, 'static'),
 ]
+
+
+STATICFILES_FINDERS = (
+ 
+'django.contrib.staticfiles.finders.FileSystemFinder',
+ 
+'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+ 
+)
+
+
 
 
 # import dj-database-url
 
 # db_from_env = dj-database-url.config()
 # DATABASE['default'].update(db_from_env)
+
+# if settings.DEBUG:
+#     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+ 
+# Эта строка опциональна и будет добавлять url'ы только при DEBUG = True
+ 
+# urlpatterns += staticfiles_urlpatterns()
