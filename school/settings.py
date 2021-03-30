@@ -25,7 +25,7 @@ SECRET_KEY = '+-bq(lucf_4dgz2hczvsk3wlen7z^9b)luc7(4o^3m_cb$mwu$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'asaba.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
